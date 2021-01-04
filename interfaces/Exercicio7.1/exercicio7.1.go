@@ -1,6 +1,6 @@
 /*Exercício7.1:Usando as ideias de ByteCounter, implemente contadores para palavras e linhas.
 Você perceberá que bufio.ScanWords pode ser util.
-//OBS esta solução está bem 'basica' e pode ser aprimorada*/
+//OBS esta solução está bem 'básica' e pode ser aprimorada*/
 package main
 
 import (
@@ -35,4 +35,7 @@ func main() {
 	x, y := counter(spam)
 	fmt.Println("total de palavras:", x)
 	fmt.Println("total de linhas:", y)
+	//	OUTPUT:
+	//total de palavras: 12
+	//total de linhas: 4
 }
