@@ -9,7 +9,7 @@ import (
 )
 
 func counter(s string) (int, int) {
-	str := s + " " // É preciso adicionar um espaço ao final da string para que bufio.ScanWords possa scanear a ultima palavra.
+	str := s + " "
 	wc, lc, pos := 0, 1, 0
 	for {
 		advance, _, _ := bufio.ScanWords([]byte(str), false)
