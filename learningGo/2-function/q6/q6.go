@@ -1,3 +1,5 @@
+/*Q6. (0) Average
+1. Write a function that calculates the average of a float64 slice. */
 package main
 
 import "fmt"
@@ -6,10 +8,12 @@ func average(slice []float64) (result float64) {
 	if len(slice) == 0 {
 		return
 	}
+
 	var sum float64
 	for _, value := range slice {
 		sum += value
 	}
+
 	result = sum / float64(len(slice))
 	return
 }
@@ -21,5 +25,4 @@ func main() {
 
 	num2 := average([]float64{})
 	fmt.Println(num2)
-
 }
