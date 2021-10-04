@@ -35,7 +35,4 @@ func main() {
 	x, y := counter(spam)
 	fmt.Println("total de palavras:", x)
 	fmt.Println("total de linhas:", y)
-	//	OUTPUT:
-	//total de palavras: 12
-	//total de linhas: 4
 }
