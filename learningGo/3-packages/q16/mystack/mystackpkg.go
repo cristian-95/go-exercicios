@@ -19,14 +19,14 @@ func (ms *MyStack) Push(item int) {
 		fmt.Println("stack full")
 		return
 	}
-	ms.Top++
 	ms.Items[ms.Top] = item
+	ms.Top++
 }
 
 func (ms *MyStack) Pop() int {
+	ms.Top--
 	poped := ms.Items[ms.Top]
 	ms.Items[ms.Top] = 0
-	ms.Top--
 
 	return poped
 }
