@@ -4,8 +4,7 @@ package main
 
 import (
 	"fmt"
-
-	"q16.go/mystack"
+	"go-exercicios/learningGo/3-packages/q16/mystack"
 )
 
 func main() {
