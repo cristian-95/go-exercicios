@@ -23,6 +23,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Creating file: %s", err)
 		os.Exit(1)
 	}
+	defer filePointer.Close()
 
 	for _, url := range os.Args[1:] {
 		go fetch(url, ch)
