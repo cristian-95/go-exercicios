@@ -1,10 +1,13 @@
-/*(0) Stack as package
-1. See the Q9 exercise. In this exercise we want to create a  separate package for that code. Create a proper package for your stack implementation, Push, Pop and the Stack type need to be exported */
+/*
+(0) Stack as package
+1. See the Q9 exercise. In this exercise we want to create a  separate package for that code. Create a proper package for your stack implementation, Push, Pop and the Stack type need to be exported
+*/
 package main
 
 import (
 	"fmt"
-	"go-exercicios/learningGo/3-packages/q16/mystack"
+
+	"github.com/cristian-95/go-exercicios/learningGo/3-packages/q16/mystack"
 )
 
 func main() {
