@@ -40,7 +40,7 @@ func LbToG(lb Libra) Grama {
 	return Grama(lb * 453.6)
 }
 
-func LbTo(lb Libra) Quilograma {
+func LbToKg(lb Libra) Quilograma {
 	return Quilograma(lb / 2.205)
 }
 
