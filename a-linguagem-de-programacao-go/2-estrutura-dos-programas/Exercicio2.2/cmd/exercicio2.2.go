@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	conv "github.com/cristian-95/go-exercicios/a-linguagem-de-programação-go/2-estrutura-dos-programas/Exercicio2.2/massunits"
+	conv "github.com/cristian-95/go-exercicios/a-linguagem-de-programacao-go/2-estrutura-dos-programas/Exercicio2.2/massunits"
 )
 
 func main() {

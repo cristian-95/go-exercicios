@@ -9,17 +9,17 @@ type Grama float64
 type Quilograma float64
 
 func (ot Onça) String() string {
-	return fmt.Sprintf("%g oz", ot)
+	return fmt.Sprintf("%.3g oz", ot)
 }
 
 func (lb Libra) String() string {
-	return fmt.Sprintf("%g lb", lb)
+	return fmt.Sprintf("%.3g lb", lb)
 }
 
 func (g Grama) String() string {
-	return fmt.Sprintf("%g g", g)
+	return fmt.Sprintf("%.3g g", g)
 }
 
 func (kg Quilograma) String() string {
-	return fmt.Sprintf("%g kg", kg)
+	return fmt.Sprintf("%.3g kg", kg)
 }
