@@ -1,5 +1,0 @@
-0.51s   17461 https://godoc.org
-0.63s   59897 https://golang.org
-0.64s    4154 https://gopl.io
-1.15s 2204439 https://en.wikipedia.org/wiki/2022_in_video_games
-1.15s elapsed
