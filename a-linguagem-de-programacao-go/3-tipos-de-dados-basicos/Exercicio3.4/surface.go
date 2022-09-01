@@ -6,9 +6,21 @@ import (
 	"log"
 	"math"
 	"net/http"
-
-	"github.com/cristian-95/go-exercicios/a-linguagem-de-programacao-go/3-tipos-de-dados-basicos/Exercicio3.4/framestats"
+	"net/url"
+	"strconv"
+	"strings"
 )
+
+type FrameStats struct {
+	Width   int
+	Height  int
+	Cells   int
+	XYrange float64
+	XYscale float64
+	Zscale  float64
+	Angle   float64
+	Color   string
+}
 
 func main() {
 	http.HandleFunc("/", surfaceHandler)
@@ -17,12 +29,11 @@ func main() {
 }
 
 func surfaceHandler(w http.ResponseWriter, r *http.Request) {
-	fs := framestats.FrameStats{}
+	w.Header().Set("Content-Type", "image/svg+xml")
+	fs := FrameStats{}
 	fs.GetDefaultValues()
 	sin30, cos30 := math.Sin(fs.Angle), math.Cos(fs.Angle) //seno(30°), cosseno(30°)
 
-	//fmt.Println(params["color"])
-	//fmt.Printf("\n\n***** %T -> %v len:(%d)*****************\n\n", params, params, len(params))
 	params := r.URL.Query()
 	fs.Update(params)
 
@@ -42,7 +53,7 @@ func surfaceHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "</svg>")
 }
 
-func corner(i, j int, sin30, cos30 float64, fs framestats.FrameStats) (float64, float64) {
+func corner(i, j int, sin30, cos30 float64, fs FrameStats) (float64, float64) {
 	// Encontra o ponto (x,y) no canto da celula (i,j)
 	x := fs.XYrange * (float64(i)/float64(fs.Cells) - 0.5)
 	y := fs.XYrange * (float64(j)/float64(fs.Cells) - 0.5)
@@ -62,4 +73,45 @@ func corner(i, j int, sin30, cos30 float64, fs framestats.FrameStats) (float64, 
 func f(x, y float64) float64 {
 	r := math.Hypot(x, y) // distancia de (0,0)
 	return math.Sin(r) / r
+}
+
+/******************* framestats: */
+
+func (fs *FrameStats) GetDefaultValues() {
+	fs.Width = 600
+	fs.Height = 320
+	fs.Cells = 100
+	fs.XYrange = 30
+	fs.XYscale = float64(fs.Width) / 2 / fs.XYrange
+	fs.Zscale = float64(fs.Height) * 0.4
+	fs.Angle = math.Pi / 6
+	fs.Color = "black"
+}
+
+func (fs *FrameStats) Update(params url.Values) {
+	if len(params) == 0 {
+		return
+	} else {
+		height, err := strconv.Atoi(strings.Join((params["height"]), ""))
+		if err != nil {
+			log.Fatalf("Erro: %v", err)
+			goto getWidth
+		}
+		fs.Height = height
+
+	getWidth:
+		width, err := strconv.Atoi(strings.Join((params["width"]), ""))
+		if err != nil {
+			log.Fatalf("Erro: %v", err)
+			goto getColor
+		}
+		fs.Width = width
+
+	getColor:
+		color := strings.Join((params["width"]), "")
+		if color != "" {
+			fs.Color = color
+		}
+	}
+
 }
