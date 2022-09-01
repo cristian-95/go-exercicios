@@ -9,9 +9,14 @@ import (
 )
 
 type FrameStats struct {
-	Width, Height, Cells            int
-	XYrange, XYscale, Zscale, Angle float64
-	Color                           string
+	Width   int
+	Height  int
+	Cells   int
+	XYrange float64
+	XYscale float64
+	Zscale  float64
+	Angle   float64
+	Color   string
 }
 
 func (fs *FrameStats) GetDefaultValues() {

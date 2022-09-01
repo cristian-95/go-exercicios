@@ -1,4 +1,4 @@
-module surface34
+module exercicio3.4
 
 go 1.19
 
