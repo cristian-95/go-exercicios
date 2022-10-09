@@ -2,7 +2,7 @@
 
 ---
 
-Este repositório contém possiveis soluções para exercícios dos livros:
+Este repositório contém possiveis soluções para alguns exercícios dos livros:
 
 * [A Linguagem de Programação Go](https://novatec.com.br/livros/linguagem-de-programacao-go/) (2017) de Alan A. A. Donovan e  Brian Kernighan
 
