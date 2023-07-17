@@ -1,25 +1,25 @@
 package oficina
 
 type Servico struct {
-	servico string
+	Servico string
 }
 
 func (s *Servico) setServico(opt int) {
 	switch opt {
 	case 1:
-		s.servico = "troca de oleo"
+		s.Servico = "troca de oleo"
 		break
 	case 2:
-		s.servico = "troca de pneu"
+		s.Servico = "troca de pneu"
 		break
 	case 3:
-		s.servico = "limpeza de motor"
+		s.Servico = "limpeza de motor"
 		break
 	default:
-		s.servico = "invalido"
+		s.Servico = "invalido"
 	}
 }
 
 func (s *Servico) getServico() string {
-	return s.servico
+	return s.Servico
 }

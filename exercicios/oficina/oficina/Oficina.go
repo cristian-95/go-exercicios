@@ -3,7 +3,7 @@ package oficina
 import "fmt"
 
 type Oficina struct {
-	listaDeOrdens []Registro
+	ListaDeOrdens []Registro
 }
 
 func (o *Oficina) atender() Registro {
@@ -15,10 +15,10 @@ func (o *Oficina) atender() Registro {
 
 func (o Oficina) exibir(r Registro) {
 	fmt.Println("ordem de serviço:")
-	fmt.Printf("Veiculo: %s %d\n", r.veiculo.getNome(), r.veiculo.getAno())
+	fmt.Printf("Veiculo: %s %d\n", r.Veiculo.getNome(), r.Veiculo.getAno())
 	fmt.Println("Serviços:")
-	for i := 0; i < len(r.servicos); i++ {
-		fmt.Printf("\t%s\n", r.servicos[i])
+	for i := 0; i < len(r.Servicos); i++ {
+		fmt.Printf("\t%s\n", r.Servicos[i])
 	}
 	fmt.Println("--------------------------------")
 }

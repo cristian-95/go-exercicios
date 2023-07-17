@@ -1,22 +1,22 @@
 package oficina
 
 type Veiculo struct {
-	nome string
-	ano  int
+	Nome string
+	Ano  int
 }
 
 func (v *Veiculo) setNome(nome string) {
-	v.nome = nome
+	v.Nome = nome
 }
 
 func (v *Veiculo) getNome() string {
-	return v.nome
+	return v.Nome
 }
 
 func (v *Veiculo) setAno(ano int) {
-	v.ano = ano
+	v.Ano = ano
 }
 
 func (v *Veiculo) getAno() int {
-	return v.ano
+	return v.Ano
 }

@@ -1,22 +1,22 @@
 package oficina
 
 type Registro struct {
-	veiculo  Veiculo
-	servicos []Servico
+	Veiculo  Veiculo
+	Servicos []Servico
 }
 
 func (r *Registro) getVeiculo() Veiculo {
-	return r.veiculo
+	return r.Veiculo
 }
 
 func (r *Registro) setVeiculo(v Veiculo) {
-	r.veiculo = v
+	r.Veiculo = v
 }
 
 func (r *Registro) getServicos() []Servico {
-	return r.servicos
+	return r.Servicos
 }
 
 func (r *Registro) addServico(s Servico) {
-	r.servicos = append(r.servicos, s)
+	r.Servicos = append(r.Servicos, s)
 }
