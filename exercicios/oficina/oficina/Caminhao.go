@@ -1,4 +1,4 @@
-package veiculo
+package oficina
 
 type Caminhao struct {
 	Veiculo
