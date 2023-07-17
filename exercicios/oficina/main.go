@@ -6,21 +6,24 @@ func main() {
 
 	car1 := oficina.Veiculo{Nome: "astra", Ano: 2004}
 	serv := oficina.Servico{}
-	serv.setServico(2)
+	serv.SetServico(2)
 	reg := oficina.Registro{Veiculo: car1}
-	reg.addServico(serv)
-	serv.setServico(1)
-	reg.addServico(serv)
+	reg.AddServico(serv)
+	serv.SetServico(1)
+	reg.AddServico(serv)
 
 	car2 := oficina.Veiculo{Nome: "jacare", Ano: 1978}
-	serv2 := oficina.Servico{}
-	serv2.setServico(1)
-	serv2.setServico(3)
-	reg2 := oficina.Registro{Veiculo: car2, Servicos: serv2}
+	reg2 := oficina.Registro{Veiculo: car2}
+	serv.SetServico(3)
+	reg2.AddServico(serv)
+	serv.SetServico(2)
+	reg2.AddServico(serv)
+	serv.SetServico(1)
+	reg2.AddServico(serv)
 
 	lista := []oficina.Registro{reg, reg2}
 	of := oficina.Oficina{ListaDeOrdens: lista}
-	of.atender()
-	of.atender()
+	of.Atender()
+	of.Atender()
 
 }

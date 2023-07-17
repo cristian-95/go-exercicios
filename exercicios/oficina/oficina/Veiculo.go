@@ -5,18 +5,18 @@ type Veiculo struct {
 	Ano  int
 }
 
-func (v *Veiculo) setNome(nome string) {
+func (v *Veiculo) SetNome(nome string) {
 	v.Nome = nome
 }
 
-func (v *Veiculo) getNome() string {
+func (v *Veiculo) GetNome() string {
 	return v.Nome
 }
 
-func (v *Veiculo) setAno(ano int) {
+func (v *Veiculo) SetAno(ano int) {
 	v.Ano = ano
 }
 
-func (v *Veiculo) getAno() int {
+func (v *Veiculo) GetAno() int {
 	return v.Ano
 }

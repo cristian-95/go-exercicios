@@ -4,22 +4,19 @@ type Servico struct {
 	Servico string
 }
 
-func (s *Servico) setServico(opt int) {
+func (s *Servico) SetServico(opt int) {
 	switch opt {
 	case 1:
 		s.Servico = "troca de oleo"
-		break
 	case 2:
 		s.Servico = "troca de pneu"
-		break
 	case 3:
 		s.Servico = "limpeza de motor"
-		break
 	default:
 		s.Servico = "invalido"
 	}
 }
 
-func (s *Servico) getServico() string {
+func (s *Servico) GetServico() string {
 	return s.Servico
 }

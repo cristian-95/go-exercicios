@@ -5,18 +5,18 @@ type Registro struct {
 	Servicos []Servico
 }
 
-func (r *Registro) getVeiculo() Veiculo {
+func (r *Registro) GetVeiculo() Veiculo {
 	return r.Veiculo
 }
 
-func (r *Registro) setVeiculo(v Veiculo) {
+func (r *Registro) SetVeiculo(v Veiculo) {
 	r.Veiculo = v
 }
 
-func (r *Registro) getServicos() []Servico {
+func (r *Registro) GetServicos() []Servico {
 	return r.Servicos
 }
 
-func (r *Registro) addServico(s Servico) {
+func (r *Registro) AddServico(s Servico) {
 	r.Servicos = append(r.Servicos, s)
 }
