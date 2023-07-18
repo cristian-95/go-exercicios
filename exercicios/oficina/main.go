@@ -1,10 +1,13 @@
 package main
 
-import "github.com/cristian-95/go-exercicios/exercicios/oficina/oficina"
+import (
+	"github.com/cristian-95/go-exercicios/exercicios/oficina/oficina"
+	"github.com/cristian-95/go-exercicios/exercicios/oficina/veiculo"
+)
 
 func main() {
 
-	car1 := oficina.Veiculo{Nome: "astra", Ano: 2004}
+	car1 := veiculo.Veiculo{Nome: "astra", Ano: 2004}
 	serv := oficina.Servico{}
 	serv.SetServico(2)
 	reg := oficina.Registro{Veiculo: car1}
@@ -12,7 +15,7 @@ func main() {
 	serv.SetServico(1)
 	reg.AddServico(serv)
 
-	car2 := oficina.Veiculo{Nome: "jacare", Ano: 1978}
+	car2 := veiculo.Veiculo{Nome: "jacare", Ano: 1978}
 	reg2 := oficina.Registro{Veiculo: car2}
 	serv.SetServico(3)
 	reg2.AddServico(serv)

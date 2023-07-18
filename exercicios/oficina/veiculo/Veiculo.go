@@ -1,4 +1,4 @@
-package oficina
+package veiculo
 
 type Veiculo struct {
 	Nome string

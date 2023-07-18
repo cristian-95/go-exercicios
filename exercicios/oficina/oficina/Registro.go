@@ -1,15 +1,19 @@
 package oficina
 
+import (
+	"github.com/cristian-95/go-exercicios/exercicios/oficina/veiculo"
+)
+
 type Registro struct {
-	Veiculo  Veiculo
+	Veiculo  veiculo.Veiculo
 	Servicos []Servico
 }
 
-func (r *Registro) GetVeiculo() Veiculo {
+func (r *Registro) GetVeiculo() veiculo.Veiculo {
 	return r.Veiculo
 }
 
-func (r *Registro) SetVeiculo(v Veiculo) {
+func (r *Registro) SetVeiculo(v veiculo.Veiculo) {
 	r.Veiculo = v
 }
 
