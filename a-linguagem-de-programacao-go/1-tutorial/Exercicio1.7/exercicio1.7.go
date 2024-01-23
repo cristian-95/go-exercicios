@@ -1,5 +1,5 @@
 // Exercicio 1.7 - A chamada da função io.Copy(dst, src) lê de src e escreve em dst.
-// Use-a no lugar de ioutil.ReadAll para copiar o corpo da resposta
+// Use-a no lugar de io.ReadAll para copiar o corpo da resposta
 // para os.Stdout sem exigir um buffer grande o suficiente para armazenar todo o stream.
 // Não se esqueça de verificar o resultado do erro de io.Copy.
 package main
