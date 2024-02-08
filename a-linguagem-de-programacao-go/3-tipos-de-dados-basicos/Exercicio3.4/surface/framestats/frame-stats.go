@@ -50,7 +50,7 @@ func (fs *FrameStats) Update(params url.Values) {
 		fs.Width = width
 
 	getColor:
-		color := strings.Join((params["width"]), "")
+		color := strings.Join((params["color"]), "")
 		if color != "" {
 			fs.Color = color
 		}
